@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Bootstrap starter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+
+    <header class="py-3 mb-2 text-center">
+      <div class="container">
+        <h1 class="h3 mb-0">Movies catalog</h1>
+      </div>
+    </header>
+
+
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="container">
+            <section class="mb-4">
+              <h2 class="sr-only">Movie search form</h2>
+
+              <form class="js-search-form"  method="GET" >
+                <div class="form-group">
+                  <input class="form-control  input-search title-input" type="search" name="title" placeholder="search..."
+                    aria-label="Title">
+                
+
+               
+                  <input class="form-control mt-3 rating-input" type="number"  
+                    placeholder="movie rating"  >
+                
+
+               
+                  <select class="form-control mt-3  categorie-select" name="genre" aria-label="Genre">
+                    <option value="0" >All</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control sort-select" name="sort" aria-label="Sorting">
+                    <option value="0" selected>Rating (high to low)</option>
+                    <option value="1">Rating (low to high)</option>
+                    <option value="2">A-Z</option>
+                    <option value="3">Z-A</option>
+                    <option value="4">Year (new to old)</option>
+                    <option value="5">Year (old to new)</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="submit">Search</button>
+              </form>
+            </section>
+
+            <section class="mb-4 card p-3">
+              <h2>Bookmarked movies</h2>
+              <ul class="bookmarked-movies list-unstyled  list-group liked-movies">
+               
+              </ul>
+            </section>
+          </div>
+        </div>
+
+
+        <section class="col-md-8">
+          <h2 class="h5"></h2>
+          <div class="alert alert-info">Use the form on the left to search for a movie
+
+
+
+          </div>
+
+          <ul class="list-unstyled d-flex overflow-auto align-items-center  film-wrapper">
+           
+          </ul>
+        </section>
+      </div><!-- row -->
+    </div><!-- container -->
+
+  </main>
+
+
+  <!-- MODAL -->
+
+  <section class="movie-info-modal modal fade" id="movie-info-modal" tabindex="-1" aria-labelledby="movie-info-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="movie-info-modal__title h4 modal-title" id="movie-info-title"></h2>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </section>
+      <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
